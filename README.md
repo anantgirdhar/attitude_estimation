@@ -1,2 +1,4 @@
-# attitude_estimation
-Code Files for Attitude Estimation and Control Class (GT Fall 2024 AE6356 by Dr. Glenn Lightsey)
+# Attitude Estimation and Control
+
+This repository contains code files for the Attitude Estimation and Control
+class at Georgia Tech (AE6356, Fall 2024, Dr. Glenn Lightsey)
