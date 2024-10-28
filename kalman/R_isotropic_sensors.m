@@ -14,7 +14,7 @@ function R = R_isotropic_sensors(sigmas)
   for i = 1:m
     Z((3*i-2):(3*i), i) = 1;
   end
-  R = Z * sigmas;
+  R = Z * (sigmas .^ 2);
 
   % Then turn it into a square diagonal matrix
   R = diag(R);
