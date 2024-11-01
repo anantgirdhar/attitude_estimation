@@ -13,10 +13,10 @@ r1 = [0.5, 0, -sqrt(3)/2]';
 r2 = [0, 0, -1]';
 b1 = [0.7338, 0.1985, 0.6498]';
 b2 = [0.9999, 0.0138, -0.0032]';
-sigma_1 = deg2rad(10) / sqrt(3);  % rad
-sigma_2 = deg2rad(1) / sqrt(3);  % rad
+sigma_m = deg2rad(10) / sqrt(3);  % rad
+sigma_s = deg2rad(1) / sqrt(3);  % rad
 
-sigmas = [sigma_1; sigma_2];
+sigmas = [sigma_m; sigma_s];
 r_vectors = [r1; r2];
 b_vectors = [b1; b2];
 
