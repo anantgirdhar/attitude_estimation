@@ -8,15 +8,14 @@ addpath(genpath('../kalman/'))
 
 set(groot, 'defaultLineLineWidth', 2.0);
 
-% % Load the results from problem 3
-% load('P3_results.mat')
-% true_A_BR_TRIAD_1 = estimated_A_BR_TRIAD_moon;
-% true_A_BR_TRIAD_2 = estimated_A_BR_TRIAD_sun;
-% clearvars estimated_A_BR_TRIAD_moon estimated_A_BR_TRIAD_sun;
+% Load the results from Homework 04 Problem 4
+load('A4P4_results.mat', 'q_BR_davenport_2');
+q0 = q_BR_davenport_2;
+clearvars q_BR_davenport_2;
 
 fprintf('Part (a)\n')
 % Initialize Kalman filter state
-qp = [0, 0, 0, 1]'
+qp = q0
 Pp = ((deg2rad(5) / sqrt(3)) ^ 2) * eye(3)  % squared radians
 
 fprintf('Part (b)\n')
