@@ -23,7 +23,9 @@ function [qp, Pp, dx_p] = incorporate_measurement(qm, dx_m, y, hm, Hm, Pm, R)
   K = kalman_gain(Hm, Pm, R);
   dx_p = dx_m + K * (y - hm);
   Pp = (I - K * Hm) * Pm;
-  qstar = qm + 0.5 * Xi(qm) * dx_p;
+
+  dtheta_p = dx_p(1:3, 1);
+  qstar = qm + 0.5 * Xi(qm) * dtheta_p;
   qp = qstar / vecnorm(qstar);
 
 end
