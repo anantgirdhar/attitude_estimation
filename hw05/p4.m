@@ -17,7 +17,7 @@ set(groot, 'defaultLineLineWidth', 2.0);
 fprintf('Part (a)\n')
 % Initialize Kalman filter state
 qp = [0, 0, 0, 1]'
-Pp = deg2rad(5) / sqrt(3) * eye(3)
+Pp = ((deg2rad(5) / sqrt(3)) ^ 2) * eye(3)  % squared radians
 
 fprintf('Part (b)\n')
 % Initialize Kalman filter dynamics
